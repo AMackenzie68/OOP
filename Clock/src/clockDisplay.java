@@ -14,18 +14,18 @@ public class clockDisplay {
 
         //Assigns appropriate limits to hour and minute objects, and sets time
         private clockDisplay(int hours,int minutes,int thirdamount){
-            hour = new numberDisplay(24);
-            minute = new numberDisplay(60);
-            seconda = new numberDisplay(60);
+            hour = new numberDisplay(11);
+            minute = new numberDisplay(59);
+            seconda = new numberDisplay(59);
 
             setTime(hours,minutes,thirdamount);
         }
 
 
         private clockDisplay(){
-            hour = new numberDisplay(24);
-            minute = new numberDisplay(60);
-            seconda = new numberDisplay(60);
+            hour = new numberDisplay(11);
+            minute = new numberDisplay(59);
+            seconda = new numberDisplay(59);
 
             updateDisplay();
         }
@@ -65,13 +65,13 @@ public class clockDisplay {
 
         public static void main(String[] args){
             //Creates new Calendar
-            GregorianCalendar today = new GregorianCalendar();
+            GregorianCalendar Greg = new GregorianCalendar();
 
             //Creates new clock
             new clockDisplay();
-            new clockDisplay(12,32,11);
+            new clockDisplay(10,32,11);
 
-            clockDisplay clock = new clockDisplay(today.get(Calendar.HOUR_OF_DAY),today.get(Calendar.MINUTE),today.get(Calendar.SECOND));
+            clockDisplay clock = new clockDisplay(Greg.get(Calendar.HOUR),Greg.get(Calendar.MINUTE),Greg.get(Calendar.SECOND));
 
             //Creates new timer
             Timer ticker =  new Timer();
