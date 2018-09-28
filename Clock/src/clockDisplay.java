@@ -14,7 +14,7 @@ public class clockDisplay {
 
         //Assigns appropriate limits to hour and minute objects, and sets time
         private clockDisplay(int hours,int minutes,int thirdamount){
-            hour = new numberDisplay(11);
+            hour = new numberDisplay(23);
             minute = new numberDisplay(59);
             seconda = new numberDisplay(59);
 
@@ -23,7 +23,7 @@ public class clockDisplay {
 
 
         private clockDisplay(){
-            hour = new numberDisplay(11);
+            hour = new numberDisplay(23);
             minute = new numberDisplay(59);
             seconda = new numberDisplay(59);
 
@@ -71,7 +71,7 @@ public class clockDisplay {
             new clockDisplay();
             new clockDisplay(10,32,11);
 
-            clockDisplay clock = new clockDisplay(Greg.get(Calendar.HOUR),Greg.get(Calendar.MINUTE),Greg.get(Calendar.SECOND));
+            clockDisplay clock = new clockDisplay(Greg.get(Calendar.HOUR_OF_DAY),Greg.get(Calendar.MINUTE),Greg.get(Calendar.SECOND));
 
             //Creates new timer
             Timer ticker =  new Timer();
