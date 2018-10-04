@@ -1,12 +1,13 @@
 public class numberDisplay {
 
-    //Variables
+    //*****VARIABLES*****
 
         private int limit;
         private int value;
 
-    //Methods
+    //*****METHODS*****
 
+        //Sets the limit for a unit of time
         public numberDisplay(int limitInput){
 
             value = 0;
@@ -26,6 +27,7 @@ public class numberDisplay {
 
         }
 
+        //Returns value. If value less than ten, it returns the value with a 0 preceeding it to conform with the format
         String getDisplayValue(){
 
             if (value < 10){
@@ -40,10 +42,11 @@ public class numberDisplay {
 
         }
 
+        //increments the value of the unit of time, returning to zero when limit is reached
         void increment(){
 
             value = (value + 1) % limit;
 
         }
 
-}//end of class
+}//END OF CLASS
