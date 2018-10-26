@@ -1,6 +1,8 @@
 import java.util.Scanner;
 
 public class PontoonGame {
+//Manages the current game of pontoon, could be more abstracted    
+    
     Scanner kboard;
     Player player;
     Dealer dealer;
