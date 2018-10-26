@@ -1,6 +1,6 @@
-
-
 public abstract class CardHolder {
+//Abstract Superclass for all objects which hold cards (dealer, player)
+    
     int newcard = 0;
     int total = 0;
 
