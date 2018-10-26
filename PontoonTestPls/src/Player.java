@@ -1,5 +1,5 @@
 public class Player extends CardHolder{
-  
+//Player class is a CardHolder who can also draw and show more cards  
 
     int total = 0;
     int newcard = 0;
