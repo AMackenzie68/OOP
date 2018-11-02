@@ -6,6 +6,7 @@ public class Dealer extends CardHolder{
     }
 
     public void dealerDraw() {
+     //Uses inherited drawCard method to generate a hand for the Dealer
         while(this.total < 16) {
             drawCard();
         }
