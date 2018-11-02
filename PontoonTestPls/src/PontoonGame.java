@@ -12,6 +12,7 @@ public class PontoonGame {
     }
 
     public void checkWin() {
+       //Checks the result of the game, should probably use CASE instead of many IF statements
         if (this.player.total > 21) {
             System.out.println("Busted! You got over 21, try again.");
         } else if (this.player.total > this.dealer.total) {
@@ -25,6 +26,8 @@ public class PontoonGame {
     }
 
     public void startPontoon() {
+       //Runs the game of pontoon
+        //Needs to be considered for more abstraction or restructuring
         this.player = new Player();
         this.dealer = new Dealer();
         this.dealer.dealerDraw();
