@@ -9,6 +9,7 @@ public class Player extends CardHolder{
     }
 
     public void firstDraw() {
+       //Generates first two cards for the player, showing each individual card drawn
         this.drawCard();
         System.out.println("First Card: "+newcard);
         this.drawCard();
@@ -17,6 +18,7 @@ public class Player extends CardHolder{
     }
 
     public void subsequentDraw(){
+      //Draws Player cards other than 
         this.drawCard();
         System.out.println("New Card: " +newcard);
         System.out.println("New Total: "+total);
