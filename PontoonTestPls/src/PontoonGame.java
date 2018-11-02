@@ -46,8 +46,8 @@ public class PontoonGame {
         if (replay.equalsIgnoreCase("y")) {
             this.startPontoon();
         }
-
+         kboard.close();
     }
-    kboard.close();
+   
 }
 
