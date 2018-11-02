@@ -48,5 +48,6 @@ public class PontoonGame {
         }
 
     }
+    kboard.close();
 }
 
