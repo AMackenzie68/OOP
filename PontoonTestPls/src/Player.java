@@ -18,7 +18,7 @@ public class Player extends CardHolder{
     }
 
     public void subsequentDraw(){
-      //Draws Player cards other than 
+      //Draws Player cards other than the initial two cards.
         this.drawCard();
         System.out.println("New Card: " +newcard);
         System.out.println("New Total: "+total);
