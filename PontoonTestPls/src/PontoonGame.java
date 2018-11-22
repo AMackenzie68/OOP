@@ -1,43 +1,39 @@
 import java.util.Scanner;
 
-public class PontoonGame {
+
+public class PontoonGame{
+//Manages the current game of pontoon, could be more abstracted    
+
+
+
+
     Scanner kboard;
     Player player;
     Dealer dealer;
-    private String gameResult;
 
     public PontoonGame() {
-        //this.kboard = new Scanner(System.in);
-        startPontoon();
+        this.kboard = new Scanner(System.in);
     }
 
+
     public void checkWin() {
+       //Checks the result of the game, should probably use CASE instead of many IF statements
         if (this.player.total > 21) {
             System.out.println("Busted! You got over 21, try again.");
-            gameResult = "lose";
         } else if (this.player.total > this.dealer.total) {
             System.out.println("You win!");
-            gameResult = "win";
         } else if (this.dealer.total > 21) {
             System.out.println("The dealer Busted, you win by default!");
-            gameResult = "win";
-        } else if (this.player.total == this.dealer.total) {
-            System.out.println("Draw! You got the same as the Dealer");
-            gameResult = "draw";
-        }else if (this.player.total < this.dealer.total) {
-            System.out.println("You lose! The dealer got closer than you");
-            gameResult = "lose";
+        } else {
+            System.out.println(this.dealer.total);
         }
 
     }
 
-    public String returnResult(){
-
-        return gameResult;
-
-    }
-
     public void startPontoon() {
+
+       //Runs the game of pontoon
+        //Needs to be considered for more abstraction or restructuring
         this.player = new Player();
         this.dealer = new Dealer();
         this.dealer.dealerDraw();
@@ -56,7 +52,9 @@ public class PontoonGame {
         if (replay.equalsIgnoreCase("y")) {
             this.startPontoon();
         }
-
+         kboard.close();
     }
+
+
 }
 
