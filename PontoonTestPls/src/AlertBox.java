@@ -1,3 +1,5 @@
+//Original code referenced from New Boston
+
 import javafx.stage.*;
 import javafx.scene.*;
 import javafx.scene.layout.*;
